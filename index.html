@@ -1,0 +1,479 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lydia’s Digital World</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat&display=swap" rel="stylesheet">
+
+  <style>
+  :root {
+  --bg: #ffffff;
+  --accent: #ff69b4;
+  --soft: #fff0f5;
+}
+
+body {
+  background: var(--bg);
+}
+
+.hero {
+  background: var(--soft);
+}
+
+.arrow,
+nav a:hover {
+  color: var(--accent);
+}
+/* ANIMATIONS */
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* HERO SPECIAL */
+.hero-text {
+  animation: slideInLeft 1s ease forwards;
+}
+
+.hero-image {
+  animation: slideInRight 1s ease forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #ffffff;
+      color: #222;
+    }
+
+    section {
+      padding: 80px 60px;
+    }
+
+    h1, h2 {
+      font-family: 'Libre Baskerville', serif;
+    }
+
+    /* WELCOME */
+    .welcome {
+      height: 100vh;
+      background: linear-gradient(to bottom, #ffe6f0, #ffffff);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .welcome h1 {
+      color: #ff69b4;
+      font-size: 38px;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      background: white;
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #222;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ff69b4;
+    }
+
+    /* HERO (FLOAT METHOD – STABLE) */
+    .hero {
+      background: #fff0f5;
+    }
+
+    .hero-text {
+      width: 50%;
+      float: left;
+    }
+
+    .hero-text h1 {
+      font-size: 56px;
+      margin-bottom: 10px;
+      gap:12px;
+     align-items:left;
+     display:flex;
+    }
+    
+.intro-line {
+  font-size: 60px;
+  display: flex;
+  align-items: left;
+  gap: 12px;
+}
+
+.intro-sub {
+  font-size: 50px;
+  display:flex;
+  color: #555;
+ align-items:left;
+ gap:12px;
+}
+.hero.wrap{
+   display:flex;
+   align-items: left;
+   justify-content: space-between;
+
+    }
+
+    .hero-image {
+      width: 50%;
+      float: right;
+      text-align: right;
+    }
+
+    .hero-image img {
+      width: 500px;
+      max-width: 100%;
+      border-radius: 22px;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.18);
+    }
+
+    .clear {
+      clear: both;
+    }
+
+    /* ABOUT */
+    #about p {
+      max-width: 800px;
+      line-height: 1.6;
+    }
+    
+    .hobbies {
+  margin-top: 15px;
+}
+
+.hobbies li {
+  margin-bottom: 8px;
+  list-style-type: "♡ ";
+  padding-left: 6px;
+}
+
+    .whisper {
+      font-size: 13px;
+      color: #666;
+      margin-top:10px;
+}
+    .right-text{
+      font-style: italic;
+      text-align: right;
+    }
+
+    /* BUCKET LIST */
+    #bucket {
+      background: #fdf2f8;
+      border-radius: 30px;
+      margin: 40px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    ul li::marker {
+      color: #ff69b4;
+    }
+
+    /* ALBUM */
+    .album {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+    #album {
+  background: #ffffff;
+}
+
+#album h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+    .album-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .album-item img {
+      width: 100%;
+      height: 80%
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .album-item p {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+      background: rgba(0,0,0,0.45);
+      color: white;
+      font-size: 14px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .album-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .album-item:hover p {
+      opacity: 1;
+    }
+
+    /* MOBILE */
+    @media (max-width: 800px) {
+      .hero-text,
+      .hero-image {
+        width: 100%;
+        float: none;
+        text-align: center;
+      }
+
+      .hero-image img {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+
+<script>
+  const fades = document.querySelectorAll('.fade');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  fades.forEach(fade => observer.observe(fade));
+  
+  function setTheme(theme) {
+    if (theme === 'pink') {
+      document.documentElement.style.setProperty('--accent', '#ff69b4');
+      document.documentElement.style.setProperty('--soft', '#fff0f5');
+    }
+    if (theme === 'lavender') {
+      document.documentElement.style.setProperty('--accent', '#a78bfa');
+      document.documentElement.style.setProperty('--soft', '#f3e8ff');
+    }
+    if (theme === 'mint') {
+      document.documentElement.style.setProperty('--accent', '#34d399');
+      document.documentElement.style.setProperty('--soft', '#ecfdf5');
+    }
+  }
+</script>
+
+<body>
+
+  <!-- WELCOME -->
+  <section class="welcome">
+    <h1>welcome to my little digital world...</h1>
+    <p>my first project🤗.
+    <p class="small text italics">
+ mi primer proyecto 😉.
+</p>
+  </section>
+
+  <!-- NAV -->
+  <nav>
+ 
+    <a href="#intro">Intro</a><button onclick="setTheme('pink')">🌸</button>
+    <a href="#about">About</a><button onclick="setTheme('lavender')">💜</button>
+    <a href="#bucket">Bucket</a><button onclick="setTheme('mint')">🍃</button>
+    <a href="#album">Album</a><button onclick="setTheme('flower')">🌷</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="intro">
+    <div class="hero-text">
+      <h1> ...I’m Lydia</h1>
+      <p>
+        just a normal teenager, or
+        ... maybe not😚.
+      </p>
+    </div>
+
+    <div class="hero-image">
+      <img src="me.jpg" alt="Lydia">
+    </div>
+
+    <div class="clear"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" 
+  
+ <class="bold" > <h2>ABOUT ME🐹</h2>
+
+    <p>
+      I’m 5’0, fun, introverted, different and silly.
+      I love photography ✌and art, but I’m a science student 🙂
+      #future civil engineer 🔧🏗️😜.
+    </p>
+    
+    <p>
+      Note: i can be so unpredictable😭 and indecisive but yhhh thats what makes me, ME!😚
+     </p>
+     
+    <p>
+      I have a pretty cool dude of a best friend and her name is Annabellee.
+      She’s cool and smart🧠, like 99.9% smart🤓, and I love herrr👁👅👁.
+    </p>
+
+    <p class="small-text left-text italics">
+      I make novels too, shh🙊.
+      
+     <p> 
+     También, algo sobre mi: aprendo español y quiero ser multilingüe...YYYY, bienvenido a mi sito web 😊❤
+     era uno de mis sueños más inalcanzables,¡¡ ahora lo estoy logrando¡¡😭🔥
+     ..Ahora me siento como una reinaaa 👑😁.
+      
+      <h3>Mis Hobbies—My Hobbies</h3>
+
+<ul class="hobbies">
+  <li>Photography 📸</li>
+  <li>Art & sketching 🎨</li>
+  <li>Reading novels 😎</li>
+  <li>Listening to music 🎧 majorly Afrobeats 🙃</li>
+  <li>Learning new things (coding now 👀)</li>
+   <li> knitting👯</li>
+    <li> having funn😛
+   <li> sleeping 🙂</li></li>
+</ul>
+    </p>
+    
+  </section>
+  
+  
+  
+  
+  
+
+  <!-- BUCKET LIST -->
+  <section id="bucket">
+    <h2>Bucket List</h2>
+    <ul>
+      <li>Create my first website  ✔</li>
+      <li>Become a civil engineer</li>
+      <li>Publish a novel</li>
+      <li>Travel with my camera</li>
+      <li>Be multilinguallll </li>
+    </ul>
+  </section>
+
+  
+  
+  
+  
+  
+  ..
+  <h2>My Album</h2>
+
+  <div class="album">
+    <div class="album-item">
+      <img src="img1.jpg" alt="ME.">
+      <p>such a happy soul</p>
+    </div>
+
+    <div class="album-item">
+      <img src="img2.jpg" alt="MEE">
+      <p>hehee</p>
+    </div>
+
+    <div class="album-item">
+      <img src="img3.jpg" alt="ME AGAIN">
+      <p>🌼</p>
+    </div>
+
+    <div class="album-item">
+      <img src="img4.jpg" alt="MEEEEE">
+      <p>👅</p>
+  </div>  
+  
+  <div class="album-item">
+      <img src="img5.jpg" alt="ME AGAIN">
+      <p>💞</p>
+     </div>   
+      <div class="album-item">
+      <img src="img6.jpg" alt="MEEEEE">
+      <p>a little memory</p>
+  
+      
+    </div>
+    
+      <section id="bestie-album"
+  <h3>Me & Annabelle 💕, memories with my favorite human </h3>
+  </p>
+
+  <div class="album">
+    <div class="album-item">
+      <img src="anna1.jpg">
+      <p>bestie moments 🫶</p>
+    </div>
+
+    <div class="album-item">
+      <img src="anna2.jpg">
+      <p>us being silly</p>
+    </div>
+
+    <div class="album-item">
+      <img src="anna3.jpg">
+      <p>core memory 💗</p>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
+    
